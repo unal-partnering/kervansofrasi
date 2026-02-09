@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kervan Sofrası | Damak Zevkiniz 1987</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fdfaf5;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        .bg-bordo {
+            background-color: #7c0000;
+        }
+        .text-bordo {
+            color: #7c0000;
+        }
+        .hero-overlay {
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.55));
+        }
+        .nav-blur {
+            backdrop-filter: blur(10px);
+            background-color: rgba(252, 251, 247, 0.9);
+        }
+        /* Osmanlı/Selçuklu Motifi Arka Planı */
+        .motif-bg {
+            background-color: #3d2b1f;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23543d2f' fill-opacity='0.4'%3E%3Cpath d='M40 0l10 10H30L40 0zM10 40l10 10V30L10 40zm60 0l-10 10V30l10 10zM40 80l-10-10h20L40 80zM30 10l10 10 10-10h10L50 20l10 10v10L50 50l10 10v10H50L40 60l-10 10H20V60L10 50l10-10V30L10 20V10h10l10 10z'/%3E%3C/g%3E%3C/svg%3E");
+        }
+        .faq-item:hover .faq-answer {
+            max-height: 200px;
+            margin-top: 1rem;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.4s ease-out;
+        }
+        .contact-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 3px solid #7c0000;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        .contact-card:hover {
+            background: rgba(255, 255, 255, 0.07);
+        }
+        
+        /* Premium Logo Font Styles */
+        .logo-text-kervan {
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 0.15em;
+            font-weight: 700;
+        }
+        .logo-text-sofrasi {
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 0.4em;
+            font-weight: 400;
+            font-size: 0.6rem;
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased">
+
+    <!-- Navigasyon -->
+    <nav class="fixed w-full z-50 nav-blur border-b border-orange-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Sol Üst Logo Alanı -->
+                <div class="flex items-center gap-4">
+                    <div class="w-14 h-14 flex items-center justify-center">
+                        <img src="logo.png" alt="Kervan Sofrası Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-2xl logo-text-kervan text-bordo leading-none uppercase">Kervan</span>
+                        <span class="logo-text-sofrasi text-gray-500 uppercase mt-1">Sofrası</span>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex space-x-8 font-medium text-xs uppercase tracking-widest">
+                    <a href="#ana-sayfa" class="hover:text-bordo transition-colors">Ana Sayfa</a>
+                    <a href="#menü" class="hover:text-bordo transition-colors">Ustalık Eserlerimiz</a>
+                    <a href="#hakkimizda" class="hover:text-bordo transition-colors">Hikayemiz</a>
+                    <a href="#iletisim" class="hover:text-bordo transition-colors">İletişim</a>
+                </div>
+
+                <div class="flex gap-4">
+                    <a href="tel:05469655050" class="bg-bordo text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-red-900 transition-all shadow-lg flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328z"/>
+                        </svg>
+                        <span class="hidden sm:inline uppercase tracking-tighter">Paket Servis</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Bölümü -->
+    <section id="ana-sayfa" class="relative h-[85vh] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="anafoto.jpg" alt="Kervan Sofrası Odun Ateşi" class="w-full h-full object-cover">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+        
+        <div class="relative z-10 text-center px-4" data-aos="fade-up">
+            <span class="inline-block px-4 py-1 border border-white/30 rounded-full text-white text-sm tracking-widest uppercase mb-6 backdrop-blur-sm italic font-light">1987'den Günümüze</span>
+            <h1 class="text-5xl md:text-8xl text-white font-bold mb-6 leading-tight">
+                Odun Ateşinde<br><span class="text-orange-100 italic text-shadow-lg">Gerçek Lezzet.</span>
+            </h1>
+            <p class="text-white/90 text-lg md:text-2xl max-w-3xl mx-auto mb-10 font-light leading-relaxed">
+                Antalya Kepez'de değişmeyen geleneksel reçete, <br> usta ellerden çıkan taş fırın ustalığı.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#menü" class="bg-white text-bordo px-10 py-4 rounded-full font-bold hover:bg-gray-100 transition-all transform hover:scale-105 shadow-xl">Menümüzü İnceleyin</a>
+                <a href="tel:02423351879" class="bg-bordo text-white px-10 py-4 rounded-full font-bold hover:bg-red-900 transition-all transform hover:scale-105 shadow-xl flex items-center justify-center gap-2 uppercase tracking-wide text-sm">Hemen Arayın</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hızlı İstatistikler -->
+    <section class="relative z-20 -mt-16 max-w-5xl mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-1 bg-white rounded-3xl shadow-2xl overflow-hidden">
+            <div class="p-8 text-center border-b md:border-b-0 md:border-r border-orange-50 bg-[#fffdfa]" data-aos="fade-up" data-aos-delay="100">
+                <span class="text-5xl font-bold text-bordo block mb-2">37+</span>
+                <p class="text-gray-500 font-medium uppercase tracking-widest text-xs">Yıllık Tecrübe</p>
+            </div>
+            <div class="p-8 text-center border-b md:border-b-0 md:border-r border-orange-50 bg-[#fffdfa]" data-aos="fade-up" data-aos-delay="200">
+                <span class="text-5xl font-bold text-bordo block mb-2">%100</span>
+                <p class="text-gray-500 font-medium uppercase tracking-widest text-xs">Doğal Malzeme</p>
+            </div>
+            <div class="p-8 text-center bg-[#fffdfa]" data-aos="fade-up" data-aos-delay="300">
+                <span class="text-5xl font-bold text-bordo block mb-2">1000+</span>
+                <p class="text-gray-500 font-medium uppercase tracking-widest text-xs">Mutlu Müşteri</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hızlı Paket Servis Bandı -->
+    <section class="py-10 bg-[#faf5f0]">
+        <div class="max-w-4xl mx-auto px-4 text-center" data-aos="zoom-in">
+            <div class="inline-flex items-center gap-3 bg-white border border-orange-200 px-6 py-3 rounded-2xl shadow-sm">
+                <span class="flex h-3 w-3 relative">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-3 w-3 bg-red-600"></span>
+                </span>
+                <p class="text-gray-700 font-semibold tracking-wide">
+                    Hızlı Paket Servis: <a href="tel:02423351879" class="text-bordo hover:underline">0242 335 18 79</a> — Kepez/Antalya ve Çevresine Sıcak Teslimat!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menü Bölümü -->
+    <section id="menü" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gray-900 text-bordo italic">Ustalık Eserlerimiz</h2>
+                <div class="w-16 h-1 bg-bordo mx-auto mb-6"></div>
+                <p class="text-gray-500 max-w-xl mx-auto italic">Fırınımızdan çıkan her lezzet, yılların ustalığıyla yoğrulmuştur.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Çorbalar -->
+                <div class="bg-[#fcfbf7] rounded-3xl overflow-hidden shadow-lg border border-orange-50 group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-64 overflow-hidden">
+                        <img src="corba.jpg" alt="Şifalı Çorbalar" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8 text-left">
+                        <h3 class="text-2xl font-bold mb-3 text-bordo">Şifalı Çorbalar</h3>
+                        <p class="text-gray-500 mb-6 text-sm">Günün her saati sıcak ve şifalı; Mercimek, Ezogelin ve günlük spesiyallerimiz.</p>
+                        <div class="pt-4 border-t border-dashed border-gray-200">
+                            <span class="text-bordo font-bold italic text-sm">Her Gün Taze</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kebaplar -->
+                <div class="bg-[#fcfbf7] rounded-3xl overflow-hidden shadow-xl border-2 border-orange-100 group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-64 overflow-hidden">
+                        <img src="izgara.jpg" alt="Izgara & Kebaplar" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8 text-left">
+                        <h3 class="text-2xl font-bold mb-3 text-bordo">Izgara & Kebaplar</h3>
+                        <p class="text-gray-500 mb-6 text-sm">Özenle seçilmiş etlerden, zırhla çekilmiş Adana ve terbiyeli ızgara çeşitleri.</p>
+                        <div class="pt-4 border-t border-dashed border-gray-200">
+                            <span class="text-bordo font-bold italic text-sm">Köz Ateşinde</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pide & Lahmacun -->
+                <div class="bg-[#fcfbf7] rounded-3xl overflow-hidden shadow-lg border border-orange-50 group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-64 overflow-hidden">
+                        <img src="pide.jpg" alt="Pide & Lahmacun" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8 text-left">
+                        <h3 class="text-2xl font-bold mb-3 text-bordo">Pide & Lahmacun</h3>
+                        <p class="text-gray-500 mb-6 text-sm">Çıtır çıtır taş fırın pidesi ve lahmacun; kıymalı, kuşbaşılı ve karışık seçeneklerle.</p>
+                        <div class="pt-4 border-t border-dashed border-gray-200">
+                            <span class="text-bordo font-bold italic text-sm">Odun Ateşinde</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hakkımızda Bölümü -->
+    <section id="hakkimizda" class="py-24 motif-bg text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <!-- Dükkan Fotoğrafı -->
+                <div class="lg:w-1/2" data-aos="fade-right">
+                    <div class="relative p-2 border border-white/10 rounded-3xl overflow-hidden">
+                        <img src="dukkan.jpg" alt="Kervan Sofrası Mekan" class="rounded-2xl opacity-90 w-full h-auto">
+                        <div class="absolute -bottom-4 -right-4 bg-bordo text-white p-6 rounded-2xl shadow-2xl">
+                            <span class="block text-3xl font-bold italic">1987</span>
+                            <span class="text-[10px] uppercase tracking-widest opacity-80 font-bold mt-1">Kuruluş</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Hikayemiz Metin -->
+                <div class="lg:w-1/2" data-aos="fade-left">
+                    <h2 class="text-4xl font-bold mb-8 italic leading-snug text-orange-100 uppercase">"Damak Zevkiniz 1987'den Beri Mirasımız"</h2>
+                    <p class="text-gray-200 text-lg mb-10 leading-relaxed font-light italic">
+                        Kervan Sofrası, sadece bir yemek durağı değil; Antalya Kepez'de kuşaktan kuşağa aktarılan bir lezzet emanetidir. Taş fırınımızda yanan meşe odununun isinden, hamurumuzun kıvamına kadar her detayda 37 yıllık bir tecrübe gizli. Biz modern hızın değil, geleneksel sabrın ve esnaf ahlakının temsilcisiyiz.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="flex items-center gap-4 bg-white/5 p-4 rounded-xl border border-white/5 hover:bg-white/10 transition-all cursor-default">
+                            <div class="text-orange-200 text-xl">❦</div>
+                            <span class="text-gray-100 font-medium tracking-wide">Gerçek Taş Fırın</span>
+                        </div>
+                        <div class="flex items-center gap-4 bg-white/5 p-4 rounded-xl border border-white/5 hover:bg-white/10 transition-all cursor-default">
+                            <div class="text-orange-200 text-xl">❦</div>
+                            <span class="text-gray-100 font-medium tracking-wide">Kadim El Lezzeti</span>
+                        </div>
+                        <div class="flex items-center gap-4 bg-white/5 p-4 rounded-xl border border-white/5 hover:bg-white/10 transition-all cursor-default">
+                            <div class="text-orange-200 text-xl">❦</div>
+                            <span class="text-gray-100 font-medium tracking-wide">Gönülden Ustalık</span>
+                        </div>
+                        <div class="flex items-center gap-4 bg-white/5 p-4 rounded-xl border border-white/5 hover:bg-white/10 transition-all cursor-default">
+                            <div class="text-orange-200 text-xl">❦</div>
+                            <span class="text-gray-100 font-medium tracking-wide">Güler Yüzlü Esnaflık</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sıkça Sorulan Sorular -->
+    <section id="sorular" class="py-24 bg-white">
+        <div class="max-w-3xl mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4 text-bordo italic uppercase tracking-wider">Merak Edilenler</h2>
+                <div class="w-12 h-1 bg-bordo mx-auto"></div>
+            </div>
+
+            <div class="space-y-4">
+                <div class="faq-item border-b border-orange-50 pb-6 cursor-pointer group" data-aos="fade-up">
+                    <div class="flex justify-between items-center text-xl font-bold group-hover:text-bordo transition-colors italic">
+                        <span>Hangi bölgelere paket servisiniz var?</span>
+                        <span class="text-bordo text-2xl">+</span>
+                    </div>
+                    <div class="faq-answer text-gray-500 leading-relaxed italic text-sm">
+                        Antalya Kepez bölgesinde; <strong>Ulus, Özgürlük, Yeşilırmak</strong> ve çevre mahallelere hızlı paket servisimiz bulunmaktadır. Detaylı bilgi için bizi arayabilirsiniz.
+                    </div>
+                </div>
+
+                <div class="faq-item border-b border-orange-50 pb-6 cursor-pointer group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex justify-between items-center text-xl font-bold group-hover:text-bordo transition-colors italic">
+                        <span>Toplu pide siparişi alıyor musunuz?</span>
+                        <span class="text-bordo text-2xl">+</span>
+                    </div>
+                    <div class="faq-answer text-gray-500 leading-relaxed italic text-sm">
+                        Evet, <strong>düğün, cenaze, mevlit ve özel davetleriniz</strong> için toplu pide ve lahmacun siparişi hazırlıyoruz. Toplu siparişlerde lütfen en az 1 gün önceden bizimle iletişime geçiniz.
+                    </div>
+                </div>
+
+                <div class="faq-item border-b border-orange-50 pb-6 cursor-pointer group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex justify-between items-center text-xl font-bold group-hover:text-bordo transition-colors italic">
+                        <span>Ürünlerinizde odun ateşi mi kullanıyorsunuz?</span>
+                        <span class="text-bordo text-2xl">+</span>
+                    </div>
+                    <div class="faq-answer text-gray-500 leading-relaxed italic text-sm">
+                        Kesinlikle. Lezzetimizin sırrı olan taş fırınımızda sadece <strong>meşe ve gürgen odunları</strong> kullanılmaktadır. Elektrikli pişirme yöntemi mutfağımıza giremez.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- İletişim & Harita -->
+    <section id="iletisim" class="bg-[#1a130f] text-white py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <div data-aos="fade-up">
+                    <h2 class="text-4xl font-bold mb-10 text-orange-50 italic uppercase tracking-wider">Ulaşım ve İletişim</h2>
+                    
+                    <div class="space-y-6">
+                        <!-- Adres -->
+                        <div class="contact-card rounded-xl">
+                            <div class="flex items-center gap-4 mb-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#7c0000" viewBox="0 0 16 16">
+                                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                                </svg>
+                                <h4 class="text-md font-bold text-orange-100 italic uppercase tracking-tighter">Açık Adresimiz</h4>
+                            </div>
+                            <p class="text-gray-400 ml-9 text-xs">Ulus, 2105. Sk. NO:39/B,<br>07025 Kepez/Antalya</p>
+                        </div>
+
+                        <!-- Saatler -->
+                        <div class="contact-card rounded-xl">
+                            <div class="flex items-center gap-4 mb-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#7c0000" viewBox="0 0 16 16">
+                                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                                </svg>
+                                <h4 class="text-md font-bold text-orange-100 italic uppercase tracking-tighter">Hizmet Saatleri</h4>
+                            </div>
+                            <p class="text-gray-400 ml-9 font-medium uppercase tracking-widest text-[10px]">Her Gün: 11:00 - 22:00</p>
+                        </div>
+
+                        <!-- Telefonlar -->
+                        <div class="contact-card rounded-xl">
+                            <div class="flex items-center gap-4 mb-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#7c0000" viewBox="0 0 16 16">
+                                    <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6z"/>
+                                </svg>
+                                <h4 class="text-md font-bold text-orange-100 italic uppercase tracking-tighter">Sipariş Hatları</h4>
+                            </div>
+                            <div class="ml-9 space-y-2">
+                                <a href="tel:02423351879" class="text-lg font-bold block hover:text-bordo transition-colors tracking-tight">0242 335 18 79</a>
+                                <a href="tel:05469655050" class="text-lg font-bold block hover:text-bordo transition-colors tracking-tight">0546 965 50 50</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rounded-3xl overflow-hidden h-[500px] shadow-2xl relative border-8 border-white/5" data-aos="fade-left">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3191.0371391936355!2d30.6974163!3d36.9133887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c38f2681b8ebf5%3A0x6d6a7237ee276fcc!2sKervan%20Sofras%C4%B1!5e0!3m2!1str!2str!4v1700000000000!5m2!1str!2str" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-500 py-12 text-center border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex items-center justify-center gap-4 mb-6">
+                <!-- Footer Logo -->
+                <div class="w-10 h-10 flex items-center justify-center">
+                    <img src="logo.png" alt="Logo" class="w-full h-full object-contain">
+                </div>
+                <div class="flex flex-col text-left">
+                    <span class="text-xl font-bold tracking-widest text-white uppercase leading-none">Kervan</span>
+                    <span class="text-[8px] uppercase tracking-[0.4em] text-gray-400 font-bold uppercase mt-1 leading-none">Sofrası</span>
+                </div>
+            </div>
+            <div class="flex justify-center gap-8 mb-8 text-[10px] uppercase tracking-widest font-bold">
+                <a href="https://www.instagram.com/kervansofrasiantalya/" class="hover:text-white transition-colors">Instagram</a>
+                <a href="https://maps.app.goo.gl/JF4hpFTGWj4jCdch7" class="hover:text-white transition-colors">Google Maps</a>
+            </div>
+            <p class="text-[9px] uppercase tracking-[0.3em] text-gray-700 font-light italic">"Damak Zevkiniz 1987'den Beri Bizim Mirasımız"</p>
+        </div>
+    </footer>
+
+    <!-- Mobil Hızlı Erişim Paneli -->
+    <div class="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 w-[92%] z-50 flex gap-2">
+        <a href="tel:05469655050" class="flex-1 bg-bordo text-white py-4 rounded-2xl flex items-center justify-center gap-2 font-bold shadow-2xl active:scale-95 transition-transform uppercase text-xs tracking-wider">Sipariş Ver</a>
+        <a href="https://maps.app.goo.gl/JF4hpFTGWj4jCdch7" class="flex-1 bg-white text-gray-900 py-4 rounded-2xl flex items-center justify-center gap-2 font-bold shadow-2xl active:scale-95 transition-transform border border-gray-100 uppercase text-xs tracking-wider">Yol Tarifi</a>
+    </div>
+
+    <script>
+        AOS.init({
+            once: true,
+            duration: 1000,
+            offset: 120
+        });
+
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-xl');
+                nav.style.height = '70px';
+            } else {
+                nav.classList.remove('shadow-xl');
+                nav.style.height = '80px';
+            }
+        });
+    </script>
+</body>
+</html>
